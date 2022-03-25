@@ -1,2 +1,4 @@
-# wgc-landing-page
+# WGC : Landing Page & new component
+
+
  
