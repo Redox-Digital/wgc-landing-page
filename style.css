@@ -55,6 +55,10 @@ a {
     text-decoration: none;
 }
 
+.subtitle, .surtitle {
+    color: var(--color-grey);
+}
+
 /* .fonts */
 
 /* --- buttons --- */
@@ -74,6 +78,9 @@ a {
     padding: 10px 20px;
 
     transition: all .3 ease-in-out;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .btn:hover {
@@ -102,15 +109,41 @@ a {
     /*box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);*/
 }
 
-.btn-100 {
+.btn-m-100 {
     width: 100%!important;
 }
 
 /* --- .buttons --- */
 
 /* --- components --- */
+nav {
+    display: none!important;
+}
 
 /* --- .components --- */
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#intro-section {
+    background-color: var(--color-primary);
+    background-image: url(./assets/img/intro.JPG);
+    min-height: 75vh;
+}
+
+#intro-section h1, #intro-section p {
+    color: var(--color-white);
+}
+
+#how-to-section {
+    background-color: var(--color-light);
+}
+
+#private-challenges-section {
+    background-color: var(--color-white);
+}
 
 /* --- footer --- */
 footer {
