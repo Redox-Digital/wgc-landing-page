@@ -418,6 +418,18 @@ nav {
 @media (min-width: 1200px) {
     .one-two-thirds-section .one-third > .container,
     .two-one-thirds-section .one-third > .container {
+        max-width: 380px;
+    }
+
+    .one-two-thirds-section .two-thirds > .container,
+    .two-one-thirds-section .two-thirds > .container {
+        max-width: 760px;
+    }
+}
+
+@media (min-width: 1400) {
+    .one-two-thirds-section .one-third > .container,
+    .two-one-thirds-section .one-third > .container {
         max-width: 440px;
     }
 
@@ -540,7 +552,6 @@ section {
 
     padding-top: 2rem;
     padding-bottom: 2rem;
-    
 }
 
 #cta > .cta-background {
@@ -557,6 +568,11 @@ section {
 #cta h3 { text-align: center;}
 
 @media (min-width: 768px) {
+    #cta {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     #cta h3 {
         text-align: left;
         margin-left: 20px;
