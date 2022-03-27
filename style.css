@@ -25,8 +25,6 @@
     --p-size : 16px;
     --small-size : 14px;
 
-
-
     /* Overwriting Bootstrap variables */
     --bs-gutter-x: 20px;
 }
@@ -44,7 +42,7 @@
 
 
 body {
-    background-color : var(--color-bg);
+    background-color : var(--color-white);
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -117,6 +115,8 @@ a:hover {
 
     margin-top: 5px;
     margin-bottom: 5px;
+
+    border: solid 2px transparent;
 }
 
 .btn:hover {
@@ -128,6 +128,13 @@ a:hover {
     color: var(--color-white);
     background: linear-gradient(92.82deg, #488F4B -3.61%, #7EBB5D 29.58%, #8FC863 75.71%, #488F4B 104.4%);
     background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-white);
+    background-image: none;
+    color: var(--color-primary);
+    border: solid 2px var(--color-primary);
 }
 
 .btn-secondary {
@@ -144,6 +151,24 @@ a:hover {
 
     /*box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);*/
 }
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-white);
+}
+
+.btn-outline {
+    border: solid 2px var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    border: solid 2px var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+}
+
+
 
 .btn-m-100 {
     width: 100%;
@@ -163,7 +188,42 @@ a:hover {
 
 /* --- components --- */
 nav {
-    display: none!important;
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+nav img {
+    max-height: 50px;
+}
+
+nav #navbarText {
+    align-content: end;
+}
+
+nav ul {
+    margin-left: auto;
+}
+
+nav .nav-item {
+    margin-right: 18px;
+}
+
+nav .nav-btns .btn {
+    padding: 6px 20px;
+    box-shadow: none;
+}
+
+nav .nav-link {
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+nav .nav-link i {
+    margin-right: 8px;
+}
+
+nav .nav-link:hover {
+    color: var(--color-primary);
 }
 
 #temp-events {
@@ -299,6 +359,8 @@ nav {
 .horiz-banner {
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 100%;
+    background-color: var(--color-bg);
 }
 
 .two-one-thirds-section,
@@ -336,7 +398,7 @@ nav {
 }
 
 .one-two-thirds-section > .one-third {
-    background-image: url(./assets/img/DSC_7433.JPG);
+    background-image: url(./assets/img/how-to-play.jpg);
     background-position-x: center;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -383,6 +445,8 @@ nav {
     .one-two-thirds-section .one-third {
         height: auto;
         max-width: 500px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .numbered-items {
@@ -439,6 +503,18 @@ nav {
     }
 }
 
+@media (min-width: 1600px) {
+    #private-challenges-section,
+    #how-to-section {
+        max-width: 1500px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1800px) {
+
+}
+
 .category-card {
     background-color: var(--color-white);
     border-radius: 10px;
@@ -460,14 +536,21 @@ nav {
 }
 
 .category-card > .bottom {
-    height: 100px;
+    height: 150px;
     overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
 }
 
 .category-card > .bottom > img {
     width: 100%;
+    min-height: 100%;
+    align-self: center;
+    justify-self: baseline;
 }
 
 @media (min-width: 992px) {
@@ -500,13 +583,25 @@ section {
 
 #intro-section {
     background-color: var(--color-primary);
-    background-image: url(./assets/img/intro.JPG);
+    background-image: url(./assets/img/hero-section.jpg);
     background-position-x: center;
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 100px;
-    padding-bottom: 160px;
+    padding: 0;
+}
+
+#intro-section .intro-gradient {
+    background: rgb(59,115,62);
+    background: -moz-linear-gradient(90deg, rgba(59,115,62,0.6) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(59,115,62,0.6) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(90deg, rgba(59,115,62,0.6) 0%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b733e",endColorstr="#000000",GradientType=1);
+}
+
+#intro-section .container {
+    padding-top: 120px;
+    padding-bottom: 180px;
 }
 
 #intro-section h1, #intro-section p {
@@ -522,9 +617,9 @@ section {
 }
 
 @media (min-width: 1200px) {
-    #intro-section {
-        padding-top: 150px;
-        padding-bottom: 210px;
+    #intro-section .container {
+        padding-top: 170px;
+        padding-bottom: 230px;
     }    
 }
 
@@ -555,7 +650,7 @@ section {
 }
 
 #cta > .cta-background {
-    background-image : url(./assets/img/DSC_3813.JPG);
+    background-image : url(./assets/img/CTA.JPG);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -565,7 +660,10 @@ section {
     padding-bottom: 100px;
 }
 
-#cta h3 { text-align: center;}
+#cta h3 {
+    text-align: center;
+    color: var(--color-white);
+}
 
 @media (min-width: 768px) {
     #cta {
@@ -583,7 +681,7 @@ section {
 /* --- footer --- */
 footer {
     background-color: var(--color-bg);
-    margin: 100px 0;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -597,12 +695,12 @@ footer {
     margin-bottom: 20px;
 }
 
-footer > .paypal-logo {
+footer .paypal-logo {
     width: 75px;
     height: auto;
 }
 
-footer > hr {
+footer hr {
     max-width: 200px;
     border: 0 none;
     height: 2px!important;
