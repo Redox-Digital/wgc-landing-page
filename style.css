@@ -14,6 +14,8 @@
     --color-light : #fafee6;
     --color-bg : #f6f6f1;
 
+    --rgb-primary : 72, 143, 75;
+
     --color-accent : #F9A620;
 
     /* Fonts */
@@ -77,10 +79,12 @@ small { font-size: var(--small-size);}
 a {
     color: var(--color-primary);
     text-decoration: none;
+    transition: color .3s ease-in-out;
 }
 
 a:hover {
     color: var(--color-grey);
+    transition: color .3s ease-in-out;
 }
 
 .subtitle, .surtitle {
@@ -89,6 +93,10 @@ a:hover {
 
 .color-danger {
     color: #cf0000!important;
+}
+
+.text-shadow {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -121,20 +129,32 @@ a:hover {
 
 .btn:hover {
     transition: all .3 ease-in-out;
-    box-shadow: none;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
 }
 
 .btn-primary {
     color: var(--color-white);
     background: linear-gradient(92.82deg, #488F4B -3.61%, #7EBB5D 29.58%, #8FC863 75.71%, #488F4B 104.4%);
     background-color: var(--color-primary);
+    transition: all .3 ease-in-out;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: var(--color-white);
     background-image: none;
     color: var(--color-primary);
     border: solid 2px var(--color-primary);
+    transition: all .3 ease-in-out;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 .25rem rgba(var(--rgb-primary),.5);
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .btn-secondary {
@@ -148,24 +168,28 @@ a:hover {
     text-fill-color: transparent;
     */
     color: var(--color-primary);
-
-    /*box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);*/
+    transition: all .3 ease-in-out;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
     background-color: var(--color-secondary);
     border-color: var(--color-white);
+    transition: all .3 ease-in-out;
 }
 
 .btn-outline {
     border: solid 2px var(--color-primary);
     color: var(--color-primary);
+    transition: all .3 ease-in-out;
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline:focus {
     border: solid 2px var(--color-white);
     color: var(--color-white);
     background-color: var(--color-secondary);
+    transition: all .3 ease-in-out;
 }
 
 
@@ -295,13 +319,17 @@ nav .nav-link:hover {
     }
 }
 
+#concept-section .row > .col {
+    margin-bottom: 20px;
+}
+
 .concept-item {
     background-color: var(--color-bg);
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
     padding: 20px;
-    margin-bottom: 20px;
+    height: 100%;
 }
 
 .concept-item > .icon {
@@ -319,10 +347,6 @@ nav .nav-link:hover {
 
 .concept-item > p {
     margin-bottom: 0px;
-}
-
-.numbered-items {
-    margin-top: 50px;
 }
 
 .numbered-items .item {
@@ -368,9 +392,13 @@ nav .nav-link:hover {
     display: flex;
     flex-direction: column;
     flex-grow: 0;
+    min-height: 500px;
+    margin: auto;
 }
 
-.two-one-thirds-section > .two-thirds {
+.two-one-thirds-section > .two-thirds,
+.one-two-thirds-section > .two-thirds {
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -439,6 +467,7 @@ nav .nav-link:hover {
         display: flex;
         align-items: center;
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     .two-one-thirds-section .one-third,
@@ -459,7 +488,7 @@ nav .nav-link:hover {
     }
 
     .one-two-thirds-section .one-third > .container {
-        max-width: 320px;
+        max-width: 100%;
         margin-right: 0;
     }
 
@@ -469,7 +498,7 @@ nav .nav-link:hover {
     }
 
     .two-one-thirds-section .one-third > .container {
-        max-width: 320px;
+        max-width: 100%;
         margin-left: 0;
     }
 
@@ -482,7 +511,7 @@ nav .nav-link:hover {
 @media (min-width: 1200px) {
     .one-two-thirds-section .one-third > .container,
     .two-one-thirds-section .one-third > .container {
-        max-width: 380px;
+        max-width: 440px;
     }
 
     .one-two-thirds-section .two-thirds > .container,
@@ -492,10 +521,12 @@ nav .nav-link:hover {
 }
 
 @media (min-width: 1400) {
+    /*
     .one-two-thirds-section .one-third > .container,
     .two-one-thirds-section .one-third > .container {
         max-width: 440px;
     }
+    */
 
     .one-two-thirds-section .two-thirds > .container,
     .two-one-thirds-section .two-thirds > .container {
@@ -504,8 +535,8 @@ nav .nav-link:hover {
 }
 
 @media (min-width: 1600px) {
-    #private-challenges-section,
-    #how-to-section {
+    .one-two-thirds-section,
+    .two-one-thirds-section {
         max-width: 1500px;
         margin: auto;
     }
@@ -527,9 +558,26 @@ nav .nav-link:hover {
 
 .category-card:hover {
     color: var(--color-black);
-    box-shadow: none;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px);
     transition: all .3s ease-in-out;
 }
+
+#cat-hcp-single > .bottom,
+#cat-hcp-16 > .bottom,
+#cat-hcp-54 > .bottom,
+#cat-hcp-pro > .bottom {
+    align-self: center;
+    justify-self: baseline;
+    background-size: cover;
+    background-position : center;
+
+}
+
+#cat-hcp-single > .bottom { background-image: url(./assets/img/hcp-single.JPG); }
+#cat-hcp-16 > .bottom    { background-image: url(./assets/img/hcp-16.JPG); }
+#cat-hcp-54 > .bottom { background-image: url(./assets/img/hcp-54.JPG); }
+#cat-hcp-pro > .bottom { background-image: url(./assets/img/hcp-pro.JPG); }
 
 .category-card > .top {
     padding: 1.2rem;
@@ -546,12 +594,6 @@ nav .nav-link:hover {
     align-content: flex-end;
 }
 
-.category-card > .bottom > img {
-    width: 100%;
-    min-height: 100%;
-    align-self: center;
-    justify-self: baseline;
-}
 
 @media (min-width: 992px) {
     .category-card > .top {
@@ -627,8 +669,17 @@ section {
     background-color: var(--color-white);
 }
 
+#how-to-section,
+#private-challenges-section {
+    padding: 0px;
+    min-height: 500px;
+    width: 100%;
+}
+
 #how-to-section {
     background-color: var(--color-light);
+    margin: 0;
+    width: 100%;
 }
 
 #challenges-categories-section {
@@ -637,8 +688,6 @@ section {
 
 #private-challenges-section {
     background-color: var(--color-white);
-    padding-bottom: 0px;
-    min-height: 500px;
 }
 
 #cta {
