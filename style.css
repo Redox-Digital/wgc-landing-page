@@ -639,7 +639,6 @@ nav .nav-link:hover {
     background-color: var(--color-white);
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-
 }
 
 .challenge > .top {
@@ -649,11 +648,46 @@ nav .nav-link:hover {
     background-position: center;
     background-size: cover;
     color: var(--color-white);
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
+
+.challenge h4 {
+    font-size: 24px;
+    grid-row-start: 1;
+    margin: 0;
+}
+
+.challenge small {
+    font-size: 16px;
+}
+
+.challenge .badge {
+    max-height: 24px;
+    grid-row-start: 1;
+}
+
+.challenge .date-period {
+    grid-row-start: 2;
+}
+
+.challenge .remaining-time {
+    grid-row-start: 3;
+    text-align: right;
+}
+
+.challenge .game-type {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    align-self: end;
+}
+
 
 .challenge > .top,
 .challenge > .bottom {
-    padding: 15px;
+    padding: 20px;
 }
 
 .challenge h4,
