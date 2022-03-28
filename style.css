@@ -91,6 +91,10 @@ a:hover {
     color: var(--color-grey);
 }
 
+.subtitle {
+    max-width: 960px;
+}
+
 .color-danger {
     color: #cf0000!important;
 }
@@ -217,7 +221,7 @@ nav {
 }
 
 nav img {
-    max-height: 50px;
+    height: 50px;
 }
 
 nav #navbarText {
@@ -387,6 +391,12 @@ nav .nav-link:hover {
     background-color: var(--color-bg);
 }
 
+.horiz-banner > img {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+}
+
 .two-one-thirds-section,
 .one-two-thirds-section {
     display: flex;
@@ -537,7 +547,7 @@ nav .nav-link:hover {
 @media (min-width: 1600px) {
     .one-two-thirds-section,
     .two-one-thirds-section {
-        max-width: 1500px;
+        max-width: 1400px;
         margin: auto;
     }
 }
@@ -563,10 +573,10 @@ nav .nav-link:hover {
     transition: all .3s ease-in-out;
 }
 
-#cat-hcp-single > .bottom,
-#cat-hcp-16 > .bottom,
-#cat-hcp-54 > .bottom,
-#cat-hcp-pro > .bottom {
+.cat-hcp-single > .bottom,
+.cat-hcp-16 > .bottom,
+.cat-hcp-54 > .bottom,
+.cat-hcp-pro > .bottom {
     align-self: center;
     justify-self: baseline;
     background-size: cover;
@@ -574,10 +584,17 @@ nav .nav-link:hover {
 
 }
 
-#cat-hcp-single > .bottom { background-image: url(./assets/img/hcp-single.JPG); }
-#cat-hcp-16 > .bottom    { background-image: url(./assets/img/hcp-16.JPG); }
-#cat-hcp-54 > .bottom { background-image: url(./assets/img/hcp-54.JPG); }
-#cat-hcp-pro > .bottom { background-image: url(./assets/img/hcp-pro.JPG); }
+.cat-hcp-single > .bottom,
+.challenge-hcp-single > .top { background-image: url(./assets/img/hcp-single.JPG); }
+
+.cat-hcp-16 > .bottom,
+.challenge-hcp-16 > .top { background-image: url(./assets/img/hcp-16.JPG); }
+
+.cat-hcp-54 > .bottom,
+.challenge-hcp-54 > .top { background-image: url(./assets/img/hcp-54.JPG); }
+
+.cat-hcp-pro > .bottom,
+.challenge-hcp-pro > .top { background-image: url(./assets/img/hcp-pro.JPG); }
 
 .category-card > .top {
     padding: 1.2rem;
@@ -616,6 +633,45 @@ nav .nav-link:hover {
     }
 }
 
+/* Challenge component */
+
+.challenge {
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+}
+
+.challenge > .top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    background-position: center;
+    background-size: cover;
+    color: var(--color-white);
+}
+
+.challenge > .top,
+.challenge > .bottom {
+    padding: 15px;
+}
+
+.challenge h4,
+.challenge span:not(.badge),
+.challenge small {
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.challenge .badge {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-family: 'Montserrat';
+}
+
+/* .Challenge component */
+
 /* --- .components --- */
 
 section {
@@ -627,7 +683,7 @@ section {
     background-color: var(--color-primary);
     background-image: url(./assets/img/hero-section.jpg);
     background-position-x: center;
-    background-position-y: bottom;
+    background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -707,6 +763,12 @@ section {
 
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+#cta .row > .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #cta h3 {
