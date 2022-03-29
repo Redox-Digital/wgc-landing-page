@@ -639,6 +639,7 @@ nav .nav-link:hover {
     background-color: var(--color-white);
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    margin-bottom: 30px;
 }
 
 .challenge > .top {
@@ -649,15 +650,14 @@ nav .nav-link:hover {
     background-size: cover;
     color: var(--color-white);
 
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .challenge h4 {
     font-size: 24px;
     grid-row-start: 1;
-    margin: 0;
+    margin-bottom: 5px;
 }
 
 .challenge small {
@@ -666,33 +666,25 @@ nav .nav-link:hover {
 
 .challenge .badge {
     max-height: 24px;
-    grid-row-start: 1;
 }
 
-.challenge .date-period {
-    grid-row-start: 2;
+.challenge .line {
+    display: flex;
+    justify-content: space-between;
 }
 
-.challenge .remaining-time {
-    grid-row-start: 3;
-    text-align: right;
+.challenge .line:last-of-type {
+    margin-top: 15px;
 }
-
-.challenge .game-type {
-    grid-row-start: 3;
-    grid-column-start: 1;
-    align-self: end;
-}
-
 
 .challenge > .top,
 .challenge > .bottom {
     padding: 20px;
 }
 
-.challenge h4,
-.challenge span:not(.badge),
-.challenge small {
+.challenge .top h4,
+.challenge .top span:not(.badge),
+.challenge .top small {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -702,6 +694,87 @@ nav .nav-link:hover {
     font-weight: 700;
     letter-spacing: 0.08em;
     font-family: 'Montserrat';
+}
+
+.challenge .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.challenge .players {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.challenge .players > i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.challenge .price {
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    height: 50px;
+
+    color: var(--color-black);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    letter-spacing: .08em;
+    font-size: 24px;
+    padding: 8px 15px;
+}
+
+@media (min-width: 992px) {
+    .challenge .line {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .challenge .badge {
+        margin-bottom: 15px;
+    }
+
+    .challenge .bottom {
+        flex-direction: column;
+    }
+
+    .challenge .bottom > .left {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .challenge .bottom > .left,
+    .challenge .bottom > .right {
+        width: 100%;
+    }
+
+    .challenge .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .challenge .line {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .challenge .badge {
+        margin-bottom: 0px;
+    }
+
+    .challenge .bottom {
+        flex-direction: row;
+    }
+
+    .challenge .bottom > .left {
+        margin-bottom: 0px;
+        display: block;
+    }
 }
 
 /* .Challenge component */
