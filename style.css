@@ -596,24 +596,20 @@ nav .nav-link:hover {
   background-position: center;
 }
 
-.cat-hcp-single > .bottom,
-.challenge-hcp-single > .top {
-  background-image: url(./assets/img/challenge-hcp-single.JPG);
+.cat-hcp-single > .bottom {
+  background-image: url(./assets/img/hcp-single.JPG);
 }
 
-.cat-hcp-16 > .bottom,
-.challenge-hcp-16 > .top {
-  background-image: url(./assets/img/challenge-hcp-16.JPG);
+.cat-hcp-16 > .bottom {
+  background-image: url(./assets/img/hcp-16.JPG);
 }
 
-.cat-hcp-54 > .bottom,
-.challenge-hcp-54 > .top {
-  background-image: url(./assets/img/challenge-hcp-54.JPG);
+.cat-hcp-54 > .bottom {
+  background-image: url(./assets/img/hcp-54.JPG);
 }
 
-.cat-hcp-pro > .bottom,
-.challenge-hcp-pro > .top {
-  background-image: url(./assets/img/challenge-hcp-pro.JPG);
+.cat-hcp-pro > .bottom {
+  background-image: url(./assets/img/hcp-pro.JPG);
 }
 
 .category-card > .top {
@@ -656,24 +652,26 @@ nav .nav-link:hover {
 
 .challenge {
   background-color: var(--color-white);
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   margin-bottom: 30px;
 }
 
-.challenge > .bg-image-filter {
-}
-
-.challenge .top {
+.challenge > .top {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 
   background-position: center;
   background-size: cover;
-  color: var(--color-white);
+  color: var(--color-black);
 
   display: flex;
   flex-direction: column;
+}
+
+.challenge > .top.dark-bg {
+  color: var(--color-white);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .challenge h4 {
@@ -684,10 +682,6 @@ nav .nav-link:hover {
 
 .challenge small {
   font-size: 16px;
-}
-
-.challenge .badge {
-  max-height: 24px;
 }
 
 .challenge .line {
@@ -704,18 +698,21 @@ nav .nav-link:hover {
   padding: 20px;
 }
 
-.challenge .top h4,
-.challenge .top span:not(.badge),
-.challenge .top small {
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
-}
-
-.challenge .badge {
+.challenge > .middle {
+  text-align: center;
+  background-color: var(--color-secondary);
+  padding: 5px 0;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.08em;
   font-family: "Montserrat";
+}
+
+.challenge .top h4,
+.challenge .top span:not(.badge),
+.challenge .top small {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 .challenge .bottom {
@@ -735,7 +732,7 @@ nav .nav-link:hover {
 }
 
 .challenge .price {
-  background-color: var(--color-accent);
+  background: linear-gradient(131.53deg, #ffd700 6.6%, #ffb800 100.54%);
   border-radius: 10px;
   height: 50px;
 
@@ -752,10 +749,6 @@ nav .nav-link:hover {
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .challenge .badge {
-    margin-bottom: 15px;
   }
 
   .challenge .bottom {
@@ -783,10 +776,6 @@ nav .nav-link:hover {
   .challenge .line {
     justify-content: space-between;
     flex-direction: row;
-  }
-
-  .challenge .badge {
-    margin-bottom: 0px;
   }
 
   .challenge .bottom {
