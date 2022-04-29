@@ -1,0 +1,8 @@
+#nav #navbarText {
+  justify-content: flex-end;
+}
+
+#regio {
+  background-color: red;
+  height: calc(100vh - 76px); /* 76 px = navbar height */
+}
