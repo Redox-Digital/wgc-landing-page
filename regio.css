@@ -116,6 +116,10 @@
   height: 100%;
 }
 
+.region-picker > fieldset > label > svg,
+.region-picker > fieldset > label > svg > g {
+}
+
 .dots-zone > circle {
   fill: #999999;
 }
