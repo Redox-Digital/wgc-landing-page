@@ -3,8 +3,8 @@
   --drop-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 #regio {
+  padding-top: 2rem;
   min-height: calc(100vh - 76px); /* 76 px = navbar height */
-  background-color: var(--color-bg);
 }
 
 #regio > h1,
@@ -27,6 +27,10 @@
   max-width: 400px;
   border-radius: var(--border-radius);
   padding: 10px;
+  z-index: 10;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .big-button > .top {
@@ -85,13 +89,25 @@
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
-  padding: 5px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  position: relative;
+  width: fit-content;
+}
+
+.regio-card > h3,
+.regio-card > p {
+  margin: 0;
+}
+
+#occidental-card,
+#central-card,
+#oriental-card {
+  position: absolute;
+  top: 50vh;
 }
 
 /* Dots */
@@ -111,9 +127,9 @@
 }
 
 .region-picker fieldset > label > img {
-  filter: grayscale(1);
   transition: all 0.2s ease-in-out;
   width: 100%;
+  filter: grayscale(1);
 }
 
 .region-picker fieldset > input:checked + label > img {
