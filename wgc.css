@@ -235,6 +235,7 @@ nav img {
 
 nav #navbarText {
   align-content: end;
+  justify-content: flex-end;
 }
 
 nav ul {
