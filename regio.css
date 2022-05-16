@@ -122,19 +122,14 @@
   align-items: center;
   opacity: 0;
   width: fit-content;
+  position: relative;
+  /* top: 40vh; */
+  z-index: 10;
 }
 
 .regio-card > h3,
 .regio-card > p {
   margin: 0;
-}
-
-#occidental-card,
-#central-card,
-#oriental-card {
-  position: relative;
-  /* top: 40vh; */
-  z-index: 10;
 }
 
 .regio-card > h3 {
@@ -163,10 +158,17 @@
   display: flex;
   flex-direction: column;
 }
+
 .region-picker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .region-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .region-picker fieldset > input {
@@ -220,4 +222,90 @@
   .container {
     max-width: 1400px;
   }
+}
+
+/* Region picker */
+.region-picker-mobile {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .region-picker-mobile {
+    display: none;
+  }
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Hides scrollbar for Mozilla */
+.slides {
+  scrollbar-width: none;
+}
+
+/* Hides scrollbar for webkit and blink powered browsers*/
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides-item {
+  scroll-snap-align: start;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 60vh;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.slides-item > img {
+  max-height: 100%;
+}
+
+.slides-item > .regio-card {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  align-self: center;
+}
+
+.carousel__nav {
+  padding: 1.25rem 0.5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
 }
