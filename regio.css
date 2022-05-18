@@ -16,6 +16,12 @@
   text-shadow: var(--drop-shadow);
 }
 
+@media (min-width: 576px) {
+  #regio > .swipe-indication {
+    display: none;
+  }
+}
+
 .big-button {
   color: var(--color-white);
   background: linear-gradient(
@@ -32,7 +38,10 @@
   border-radius: var(--border-radius);
   padding: 10px;
   z-index: 10;
-  position: relative;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  max-width: calc(100vw - 40px);
 }
 
 @media (min-width: 576px) {
@@ -43,7 +52,6 @@
 
 @media (min-width: 992px) {
   .big-button {
-    position: fixed;
     bottom: 2rem;
     right: 2rem;
     max-width: 400px;
@@ -123,7 +131,7 @@
   opacity: 0;
   width: fit-content;
   position: relative;
-  /* top: 40vh; */
+  top: 20vh;
   z-index: 10;
 }
 
@@ -133,12 +141,13 @@
 }
 
 .regio-card > h3 {
-  font-size: 14px;
+  font-size: var(--h3-size);
   text-align: center;
 }
 
 @media (min-width: 576px) {
   .regio-card {
+    top: 40vh;
   }
 
   .regio-card > h3 {
@@ -180,6 +189,19 @@
   transition: all 0.2s ease-in-out;
   width: 100%;
   filter: grayscale(1);
+}
+
+.slides-item > img {
+  transition: all 0.2s ease-in-out;
+  filter: grayscale(1);
+}
+
+#slide-1:hover > img,
+#slide-1:active > img,
+#slide-2:hover > img,
+#slide-2:active > img {
+  transition: all 0.2s ease-in-out;
+  filter: grayscale(0);
 }
 
 .region-picker fieldset > input:checked + label > img {
@@ -260,11 +282,10 @@
 
 .slides-item {
   scroll-snap-align: start;
-  align-items: center;
+  align-items: start;
   border-radius: 10px;
   display: flex;
   flex-shrink: 0;
-  font-size: 100px;
   height: 60vh;
   justify-content: center;
   margin: 0 1rem;
@@ -276,7 +297,7 @@
 }
 
 .slides-item > img {
-  max-height: 100%;
+  max-height: 70%;
 }
 
 .slides-item > .regio-card {
@@ -287,6 +308,7 @@
 }
 
 .carousel__nav {
+  display: none;
   padding: 1.25rem 0.5rem;
 }
 
