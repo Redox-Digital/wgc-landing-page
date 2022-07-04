@@ -1,0 +1,369 @@
+#wgcTournament #intro-section {
+  background-image: url("./assets/tournament/hero_tournament.jpg");
+}
+
+#wgcTournament #intro-section h1,
+#wgcTournament #intro-section h3,
+#wgcTournament #intro-section p {
+  color: var(--color-white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+#wgcTournament #intro-section p {
+  max-width: 60%;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  #wgcTournament #intro-section p {
+    max-width: 100%;
+  }
+}
+
+#wgcTournament #intro-section h1 {
+  font-size: 80px;
+  max-width: 100%;
+}
+
+#wgcTournament #intro-section > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  #wgcTournament #intro-section .container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+#wgcTournament #intro-section h3 {
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#wgcTournament #intro-section h3 > span {
+  display: block;
+  background-color: white;
+  height: 5px;
+  width: 150px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+  margin: auto 30px;
+}
+
+#wgcTournament #intro-section p {
+  font-size: var(--h4-size);
+}
+
+@media (max-width: 1024px) {
+  #wgcTournament #intro-section h1 {
+    font-size: var(--h1-size);
+  }
+
+  #wgcTournament #intro-section h3 {
+    font-size: var(--h4-size);
+  }
+
+  #wgcTournament #intro-section h3 > span {
+    height: 3px;
+    width: 120px;
+    margin: auto 20px;
+  }
+
+  #wgcTournament #intro-section p {
+    font-size: var(--p-size);
+  }
+}
+
+#wgcTournament #concept-section,
+#wgcTournament #how-to {
+  background-color: var(--color-white);
+}
+
+#wgcTournament #challenges,
+#wgcTournament #partners {
+  background-color: var(--color-bg);
+}
+
+#wgcTournament #concept-section {
+  text-align: center;
+}
+
+#wgcTournament .subtitle {
+  max-width: 100%;
+}
+
+#wgcTournament #concept-section .subtitle {
+  margin: 30px auto;
+}
+
+#wgcTournament #concept-section .row {
+  justify-content: center;
+}
+
+#wgcTournament #concept-section .row .concept-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#wgcTournament #concept-section .row .concept-item > p:first-of-type {
+  margin-bottom: 15px;
+}
+
+#wgcTournament #challenges {
+  text-align: center;
+}
+
+#wgcTournament #challenges .section-top {
+  margin-bottom: 50px;
+}
+
+#wgcTournament #challenges .five-challenges {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto 20px;
+  flex-wrap: wrap;
+}
+
+#wgcTournament #challenges .five-challenges > .challenge {
+  width: calc(100% / 5 - 20px);
+  min-width: 290px;
+  max-width: 350px;
+  margin: 10px;
+}
+
+#wgcTournament #challenges .five-challenges > .challenge > .top {
+  color: var(--color-white);
+  background-image: url(./assets/tournament/challenge-bg.jpg);
+}
+
+#wgcTournament #challenges .five-challenges > .challenge > .bottom > .left {
+  width: 75px;
+  margin-right: 20px;
+}
+
+#wgcTournament
+  #challenges
+  .five-challenges
+  > .challenge
+  > .bottom
+  > .left
+  > .players {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  #wgcTournament #challenges .five-challenges > .challenge {
+    width: 100%;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #wgcTournament #challenges .five-challenges > .challenge {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 425px) {
+  #wgcTournament #challenges .five-challenges > .challenge {
+    min-width: 250px;
+  }
+}
+
+#wgcTournament #challenges .challenge-card > .card-label {
+  right: -10px;
+  top: -10px;
+  position: relative;
+  float: right;
+  padding: 15px;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 10px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: var(--p-size);
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+#wgcTournament #challenges .challenge-card > .card-top {
+  background: url(./assets/tournament/card-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: left;
+  padding: 10px;
+  padding-top: 65px;
+}
+
+#wgcTournament #challenges .challenge-card > .card-top h4,
+#wgcTournament #challenges .challenge-card > .card-top p,
+#wgcTournament
+  #challenges
+  .challenge-card
+  > .card-top
+  span
+  #wgcTournament
+  #challenges
+  .challenge-card
+  > .card-top
+  a {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#wgcTournament #challenges .challenge-card > .card-top p {
+  font-size: var(--small-size);
+  margin-bottom: 20px;
+}
+
+#wgcTournament #challenges .challenge-card > .card-top > .tag-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wgcTournament #challenges .challenge-card > .card-top span {
+  background: linear-gradient(131.53deg, #ffd700 6.6%, #ffb800 100.54%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--h4-size);
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-black);
+}
+
+#wgcTournament #challenges .challenge-card > .card-top a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+#wgcTournament #challenges .challenge-card > .card-bottom {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#wgcTournament #challenges .challenge-card > .card-bottom > i {
+  margin-right: 10px;
+}
+
+#wgcTournament #how-to .section-top {
+  margin-bottom: 50px;
+  text-align: center;
+}
+@media (max-width: 425px) {
+  #wgcTournament #how-to .section-top {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+#wgcTournament #how-to .section-bottom .row {
+  padding: 20px 0px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+#wgcTournament #how-to .section-bottom .row:last-of-type {
+  border-bottom: none;
+}
+
+#wgcTournament #how-to .section-bottom .row > .col-lg-3 {
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 425px) {
+  #wgcTournament #how-to .section-bottom .row > .col-lg-3 {
+    margin-bottom: 20px;
+  }
+}
+
+#wgcTournament #how-to .section-bottom .row > .col-lg-3 > span {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  height: 25px;
+  width: 25px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  margin-right: 20px;
+}
+
+#wgcTournament #partners .partners-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 425px) {
+  #wgcTournament #partners .partners-list {
+    justify-content: space-around;
+  }
+}
+
+#wgcTournament #partners .partners-list > a {
+  display: flex;
+  width: calc(100% / 8 - 20px);
+  max-height: 120px;
+  padding: 20px 10px;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  #wgcTournament #partners .partners-list > a {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#wgcTournament #partners .partners-list > a > img {
+  width: auto;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+#wgcTournament #partners .partners-list > a > img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+#wgcTournament
+  #private-challenges-section
+  .two-one-thirds-section
+  > .one-third {
+  background-image: url(./assets/tournament/there-is-more-bg.jpg);
+}
