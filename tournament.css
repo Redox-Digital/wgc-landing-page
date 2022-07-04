@@ -138,43 +138,50 @@
   flex-wrap: wrap;
 }
 
-#wgcTournament #challenges .five-challenges > .challenge-card {
+#wgcTournament #challenges .five-challenges > .challenge {
   width: calc(100% / 5 - 20px);
-  max-width: 300px;
+  min-width: 290px;
+  max-width: 350px;
+  margin: 10px;
+}
+
+#wgcTournament #challenges .five-challenges > .challenge > .top {
+  color: var(--color-white);
+  background-image: url(./assets/tournament/challenge-bg.jpg);
+}
+
+#wgcTournament #challenges .five-challenges > .challenge > .bottom > .left {
+  width: 75px;
+  margin-right: 20px;
+}
+
+#wgcTournament
+  #challenges
+  .five-challenges
+  > .challenge
+  > .bottom
+  > .left
+  > .players {
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
-  #wgcTournament #challenges .five-challenges > .challenge-card {
+  #wgcTournament #challenges .five-challenges > .challenge {
     width: 100%;
-    max-width: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    min-width: 250px;
   }
 }
 
 @media (max-width: 768px) {
-  #wgcTournament #challenges .five-challenges > .challenge-card {
-    max-width: 220px;
+  #wgcTournament #challenges .five-challenges > .challenge {
+    min-width: 250px;
   }
 }
 
 @media (max-width: 425px) {
-  #wgcTournament #challenges .five-challenges > .challenge-card {
-    max-width: 250px;
+  #wgcTournament #challenges .five-challenges > .challenge {
+    min-width: 250px;
   }
-}
-
-#wgcTournament #challenges .challenge-card {
-  background-color: var(--color-white);
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  margin-left: 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-#wgcTournament #challenges .challenge-card:hover {
-  transform: translateY(-5px);
-  transition: all 0.3s ease-in-out;
 }
 
 #wgcTournament #challenges .challenge-card > .card-label {
@@ -333,8 +340,8 @@
 
 #wgcTournament #partners .partners-list > a {
   display: flex;
-  width: calc(100% / 10 - 20px);
-  max-height: 105px;
+  width: calc(100% / 8 - 20px);
+  max-height: 120px;
   padding: 20px 10px;
   justify-content: center;
 }
