@@ -101,21 +101,26 @@
     </div>
   </section>
 
-  <section id="challenges">
+  <!-- Toogle the "user-not-logged" class to blur the challenges -->
+  <section id="challenges" class="user-not-logged">
     <div class="section-top">
       <h2>How to join the challenges</h2>
       <p class="subtitle">Choose the category which fits your handicap and the date you are going to play. Join the
         Challenge and compete against players from around the World.</p>
     </div>
+
+    <div class="five-challenges-buttons">
+      <h3><i>You need to be logged in to access the challenges</i></h3>
+      <div class="nav-btns">
+        <a href="#" class="btn btn-primary">Login</a>
+        <a href="#" class="btn btn-secondary">Register</a>
+      </div>
+    </div>
+    
     <div class="five-challenges section-bottom">
       <!-- Challenge Component -->
       <div class="challenge">
-        <!-- 
-      If you want to put an image as a background, just edit the url.
-      If the image is dark, you can switch the text to white by adding a dark-bg class as followed :
-  
-      <div class="top dark-bg" style="background-image: url(./assets/img/hcp-16.JPG)">
-    -->
+
         <div class="top">
           <div class="line">
             <h4>Saturday</h4>
@@ -143,12 +148,7 @@
       <!-- .Challenge Component -->
       <!-- Challenge Component -->
       <div class="challenge">
-        <!-- 
-      If you want to put an image as a background, just edit the url.
-      If the image is dark, you can switch the text to white by adding a dark-bg class as followed :
-  
-      <div class="top dark-bg" style="background-image: url(./assets/img/hcp-16.JPG)">
-    -->
+
         <div class="top">
           <div class="line">
             <h4>Sunday</h4>
@@ -176,12 +176,7 @@
       <!-- .Challenge Component -->
       <!-- Challenge Component -->
       <div class="challenge">
-        <!-- 
-      If you want to put an image as a background, just edit the url.
-      If the image is dark, you can switch the text to white by adding a dark-bg class as followed :
-  
-      <div class="top dark-bg" style="background-image: url(./assets/img/hcp-16.JPG)">
-    -->
+
         <div class="top">
           <div class="line">
             <h4>Monday - Friday</h4>
@@ -209,12 +204,7 @@
       <!-- .Challenge Component -->
       <!-- Challenge Component -->
       <div class="challenge">
-        <!-- 
-      If you want to put an image as a background, just edit the url.
-      If the image is dark, you can switch the text to white by adding a dark-bg class as followed :
-  
-      <div class="top dark-bg" style="background-image: url(./assets/img/hcp-16.JPG)">
-    -->
+
         <div class="top">
           <div class="line">
             <h4>Saturday</h4>
@@ -242,12 +232,7 @@
       <!-- .Challenge Component -->
       <!-- Challenge Component -->
       <div class="challenge">
-        <!-- 
-      If you want to put an image as a background, just edit the url.
-      If the image is dark, you can switch the text to white by adding a dark-bg class as followed :
-  
-      <div class="top dark-bg" style="background-image: url(./assets/img/hcp-16.JPG)">
-    -->
+
         <div class="top">
           <div class="line">
             <h4>Sunday</h4>
@@ -325,16 +310,31 @@
     </div>
   </section>
 
-  <section id="partners">
-    <div class="container" id="sponsors">
-      <h2>Our partners</h2>
+  <section id="sponsors">
+    <div class="container">
+      <h2>Our generous sponsors</h2>
       <div class="row">
-        <a href="#" class="col-4" target="_blank">
+        <a href="#" class="col-lg-4 col-md-6 col-12 sponsor" target="_blank">
           <img src="https://picsum.photos/300/200" alt="Sponsors #1">
-          <h4>Sponsors #1</h4>
+        </a>
+
+        <a href="#" class="col-lg-4 col-md-6 col-12 sponsor" target="_blank">
+          <img src="https://picsum.photos/200/200" alt="Sponsors #2">
+        </a>
+
+        <a href="#" class="col-lg-4 col-md-6 col-12 sponsor" target="_blank">
+          <img src="https://picsum.photos/300/200" alt="Sponsors #3">
+        </a>
+
+        <a href="#" class="col-lg-4 col-md-6 col-12 sponsor" target="_blank">
+          <img src="https://picsum.photos/300/200" alt="Sponsors #4">
         </a>
       </div>
+      <hr>
     </div>
+  </section>
+
+  <section id="partners">
     <div class="container">
       <h2>Our partners</h2>
       <div class="partners-list">

@@ -89,7 +89,8 @@
 }
 
 #wgcTournament #challenges,
-#wgcTournament #partners {
+#wgcTournament #partners,
+#wgcTournament #sponsors {
   background-color: var(--color-bg);
 }
 
@@ -127,12 +128,39 @@
   margin-bottom: 50px;
 }
 
+#wgcTournament #challenges > .five-challenges-buttons {
+  z-index: 10;
+}
+
 #wgcTournament #challenges .five-challenges {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: auto 20px;
   flex-wrap: wrap;
+}
+
+#wgcTournament #challenges.user-not-logged > .five-challenges {
+  filter: blur(14px);
+  margin-top: -180px;
+}
+
+#wgcTournament #challenges > .five-challenges-buttons {
+  display: none;
+}
+
+#wgcTournament #challenges.user-not-logged > .five-challenges-buttons {
+  position: sticky;
+  top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 20px;
+}
+
+#wgcTournament #challenges > .five-challenges-buttons h3 {
+  margin-bottom: 20px;
+  max-width: 550px;
 }
 
 #wgcTournament #challenges .five-challenges > .challenge {
@@ -323,16 +351,50 @@
   margin-right: 20px;
 }
 
-#wgcTournament #partners > #sponsors {
-  margin-bottom: 50px;
+#wgcTournament #sponsors {
+  text-align: center;
+  padding-bottom: 0px;
 }
 
-#wgcTournament #partners > #sponsors > h2 {
-  text-align: right;
+#wgcTournament #sponsors h2 {
+  margin-bottom: 20px;
 }
 
-#wgcTournament #partners > #sponsors .row {
-  justify-content: flex-end;
+#wgcTournament #sponsors hr {
+  margin: 0 auto;
+  height: 3px;
+  background: linear-gradient(
+    92.82deg,
+    #488f4b -3.61%,
+    #7ebb5d 29.58%,
+    #8fc863 75.71%,
+    #488f4b 104.4%
+  );
+  background-color: var(--color-primary);
+  opacity: 1;
+  max-width: 800px;
+}
+
+#wgcTournament #sponsors > .container > .row {
+  padding-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+#wgcTournament #sponsors > .container > .row > .sponsor {
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#wgcTournament #sponsors > .container > .row > .sponsor:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+#wgcTournament #sponsors > .container > .row > .sponsor > img {
+  height: 100%;
+  width: auto;
 }
 
 #wgcTournament #partners .partners-list {
