@@ -83,14 +83,14 @@
   }
 }
 
-#wgcTournament #concept-section,
-#wgcTournament #how-to {
+#wgcTournament #how-to,
+#wgcTournament #sponsors {
   background-color: var(--color-white);
 }
 
+#wgcTournament #concept-section,
 #wgcTournament #challenges,
-#wgcTournament #partners,
-#wgcTournament #sponsors {
+#wgcTournament #partners {
   background-color: var(--color-bg);
 }
 
@@ -114,6 +114,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--color-white);
 }
 
 #wgcTournament #concept-section .row .concept-item > p:first-of-type {
@@ -385,6 +386,7 @@
   transition: all 0.3s ease-in-out;
   margin-top: 20px;
   margin-bottom: 20px;
+  max-height: 200px;
 }
 
 #wgcTournament #sponsors > .container > .row > .sponsor:hover {
@@ -393,8 +395,8 @@
 }
 
 #wgcTournament #sponsors > .container > .row > .sponsor > img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 #wgcTournament #partners .partners-list {
